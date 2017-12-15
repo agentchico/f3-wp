@@ -1,0 +1,29 @@
+.f3-ao {
+    margin: 20px 0;
+}
+
+.f3-ao-section {
+    float: left;
+    width: 100%;
+}
+
+.f3-ao-section > div {
+    float: left;
+    box-sizing: border-box;
+    padding: 20px;
+    width: 50%;
+}
+
+.f3-ao-section .ao-list-map {
+    width: 100%;
+    min-height: 300px;
+}
+
+.f3-nothing-scheduled {
+    color: #aaa;
+}
+
+.ao-view-all-link {
+    margin: 10px 0;
+    font-size: 110%;
+}
