@@ -45,3 +45,7 @@ from the `disable_admin.php` file.
 
 ### About
 This plugin was built by Rubber (Andrew M) in F3 Austin for our site. Pull requests or comments are welcome.
+
+#### Built using: 
+* [CMB2](https://cmb2.io/) for custom metaboxes (plus ajax and map extensions)
+* [fullcalendar.io](https://fullcalendar.io) for the Calendar interface
