@@ -44,21 +44,20 @@ $MAPS_KEY = 'AIzaSyAeWkoyGJqPGS5J5V6MBczlLQYOe8mkTaQ';
 //Google Maps is used in several places - register it once so we can use it elsewhere
 wp_register_script('f3-google-maps-api', '//maps.googleapis.com/maps/api/js?libraries=places&key=' . $MAPS_KEY, null, null);
 
+wp_register_script('f3-vendor-js', plugin_dir_url(__FILE__) . '/base/vendor.js', array('jquery'), null);
+wp_register_script('f3', plugin_dir_url(__FILE__) . '/base/f3.js', array('f3-vendor-js'), null);
+
 //Create the custom post type and taxonomy
-require_once(dirname(__FILE__) . '/create_types.php');
-
-//Update the register screen to ask for F3 Username
-require_once(dirname(__FILE__) . '/register.php');
-
-//Remove crap from the admin panel for authors
-require_once(dirname(__FILE__) . '/disable_admin.php');
+require_once(dirname(__FILE__) . '/admin/init.php');
 
 //Register shortcodes `f3_calendar` and `f3_ao_list`
-require_once(dirname(__FILE__) . '/shortcodes.php');
+require_once(dirname(__FILE__) . '/shortcodes/init.php');
 
-//Add F3 fields to the workout post type and the ao taxonomy
-require_once(dirname(__FILE__) . '/add_metaboxes.php');
+//Custom pages for pax profile
+require_once(dirname(__FILE__) . '/pages/init.php');
+
+//Email settings
+require_once(dirname(__FILE__) . '/email/init.php');
 
 //Enable the custom API so anonymous users can retrieve workout drafts
-require_once(dirname(__FILE__) . '/f3_api.php');
-
+require_once(dirname(__FILE__) . '/api/init.php');

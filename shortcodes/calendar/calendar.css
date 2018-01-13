@@ -1,0 +1,32 @@
+.fc-title {
+    cursor: pointer;
+    font-size: 125%;
+}
+
+.select-ao {
+    display: block;
+    font-size: 18px;
+    margin: 24px auto;
+}
+
+.create-workout-button {
+    font-size: 18px;
+    padding: 8px;
+}
+
+.set-qic {
+    display: none;
+}
+
+.logged-in .set-qic {
+    display: inline-block;
+}
+
+.logged-in .qic-needed:before {
+    display: block;
+}
+
+.qic-needed:before {
+    content: '- Q Needed -';
+    display: none;
+}
